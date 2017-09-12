@@ -1,0 +1,4 @@
+name = Gridli D Email Template Module
+description = A module to implement email campaign templates
+core = 7.x
+package = Gridli D Modules

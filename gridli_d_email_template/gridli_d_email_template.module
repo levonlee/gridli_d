@@ -1,0 +1,47 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function gridli_d_email_template_theme($existing, $type, $theme, $path) {
+  $themes = [];
+  $themes['gridli_d_email_template_sample'] = [
+    'template' => 'templates/sample',
+    'variables' => ['h' => []],
+  ];
+  $themes['gridli_d_email_template_section'] = [
+    'template' => 'templates/section',
+    'variables' => ['h' => []],
+  ];
+  $themes['gridli_d_email_template_css'] = [
+    'template' => 'templates/css',
+    'variables' => ['v' => []],
+  ];
+  $themes['gridli_d_email_template_full_node'] = [
+    'template' => 'templates/full_node',
+    'variables' => ['item' => [], 'readmore' => [], 'html' => []],
+  ];
+  $themes['gridli_d_email_template_col_1'] = [
+    'template' => 'templates/col_1',
+    'variables' => ['h' => []],
+  ];
+  $themes['gridli_d_email_template_col_2'] = [
+    'template' => 'templates/col_2',
+    'variables' => ['h' => []],
+  ];
+  return $themes;
+}
+
+/**
+ * Implements hook_menu().
+ */
+function gridli_d_email_template_menu() {
+  $items = [];
+  $items['gridli-d-email-template-sample'] = [
+    'title' => t('Sample Template'),
+    'page callback' => '_gridli_d_email_template_page_sample',
+    'file' => 'gridli_d_email_template.pages.inc',
+    'type' => MENU_CALLBACK,
+    'access callback' => TRUE,
+  ];
+  return $items;
+}

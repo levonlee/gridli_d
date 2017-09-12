@@ -1,0 +1,7 @@
+<?php
+/**
+ * Implements hook_help().
+ */
+function gridli_d_help($path, $arg) {
+  // Some documentation
+}

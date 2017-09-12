@@ -1,0 +1,4 @@
+name = Gridli D Main Module
+description = A set of modules
+core = 7.x
+package = Gridli D Modules
